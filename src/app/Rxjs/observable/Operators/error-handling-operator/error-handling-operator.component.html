@@ -1,0 +1,53 @@
+<div style="padding: 10px;">
+    <h1 style="text-align: center;">Error Handling Operator</h1>
+    <h4>
+        Retry,RetryWhen,Scan,Delay
+    </h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table style="width: 100%;">
+                <tr>
+                    <th>
+                        id
+                    </th>
+                    <td>
+                        {{id}}
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <th>
+                        name
+                    </th>
+                    <td>
+                        {{name}}
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <th>
+                        username
+                    </th>
+                    <td>
+                        {{username}}
+                    </td>
+                </tr>
+            </table>
+        
+            <hr>
+            <button class="btn btn-primary" type="button" (click)="fetchdata()" >
+                <span *ngIf="fetchdata1" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                {{!fetchdata1? 'Fetch Data':'fetching data...' }}
+                
+            </button>
+            <span *ngIf="retrycountres > 0 && retrycountres < 4 "  style="margin-left: 10px;" >Retry count # {{retrycountres  }}</span>
+            <span *ngIf="retrycountres >= 4"  style="margin-left: 10px;" >Problem occur</span>
+            <span *ngIf="fetchdata1" class="spinner-grow text-primary"style="width: 20px; height: 20px;margin-left: 10px;margin-top:10px" role="status">
+               
+            </span>
+
+        </div>
+    </div>
+   
+</div>

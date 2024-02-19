@@ -1,0 +1,80 @@
+<div style="padding: 10px;overflow: hidden;">
+
+    <h4 style="text-align: center;">
+        Merge Map
+    </h4>
+    <p>-- Merge Map is a flat Map
+        <br>
+        -- It is used to access the observable data that is return from another observable.(Nested observable)
+    </p>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <strong>
+                Ex-01
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        Map
+                    </strong>
+                </p>
+                <p>
+                    --Using Map -- we need to subscribe twice (observables of observables )or(Nested observable) to get
+                    the values
+                    <br>
+                    -- If subscribe once it will give object(only observable data)
+                </p>
+            </div>
+            <br>
+            <div id="output1">
+
+            </div>
+        </div>
+
+        <div class="col">
+            <strong>
+                Ex-02
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        Map + MergeAll
+                    </strong>
+                    
+                </p>
+                <p>
+                    <strong>
+                        MergeAll
+                    </strong>
+                    --Flat observable of observables
+                </p>
+            </div>
+            <br>
+           <div id="output2">
+
+           </div>
+        </div>
+
+        <div class="col">
+            <strong>
+                Ex-03
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        MergeMap = Map+MergeAll
+                    </strong>
+                </p>
+            </div>
+            <br>
+           <div id="output3">
+
+           </div>
+        </div>
+    </div>
+
+</div>

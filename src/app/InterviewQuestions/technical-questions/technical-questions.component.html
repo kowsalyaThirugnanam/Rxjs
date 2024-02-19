@@ -1,0 +1,147 @@
+<div style="margin:10px">
+    <div class="center">
+        <h2>Technical Questions</h2>
+    </div>
+    <div>
+        <h3>1.Reverse the string</h3>
+        <span id="reverseme" style="margin-right: 20px;">Reverse the string</span>
+        <button (click)="reverseme()">Click me to reverse</button>
+        <div id="reversedtext">
+
+        </div>
+    </div>
+    <div #sumOfArray>
+        <h3>2.Sum of array</h3>
+        <p><i>Click me to get Sum of Array = [ 1,2,3,4,5]</i></p>
+        <p id="arraysum">Ans:</p>
+    </div>
+    <div>
+        <h3>3.View Child - auto focus</h3>
+        <input type="text" #viewchild>
+    </div>
+    <div>
+        <h3>3.Convert Object to an Array</h3>
+        <p>
+            {{obj|json}}
+        </p>
+        <button (click)="ObjToArray()">
+            convert
+        </button>
+        <p>keys:{{keys}} </p>
+        <p>valus:{{values}} </p>
+        <p>Array:{{objtoarray }} </p>
+    </div>
+    <div>
+        <h3>4.Convert Array to Object</h3>
+        <p>[
+            ['name','kowsi'],
+            ['age',27]
+            ] </p>
+        <button class="btn btn-primary" (click)="arrayToObj()">Convert</button>
+        <p>
+            {{arraytoObj|json}}
+        </p>
+    </div>
+    <div>
+        <h3>5.Sring is palindrome or not</h3>
+        <input type="text" [(ngModel)]="checkPalindrome" (keyup.enter)="palindrome()">
+        {{checkPalindrome}}
+        <p>{{paliAns}} </p>
+    </div>
+    <div>
+        <h3>String startWith / endWith</h3>
+        <p>{{startEndWith}} </p>
+        <button (click)="startEndWithfun()">Strat and End With </button>
+        <p>The given sting start with "String" word = {{startEndWithAns[0]}} </p>
+        <p>The given sting start with "Other" word = {{startEndWithAns[1]}} </p>
+        <p>The given sting ends with "With" = {{startEndWithAns[2]}} </p>
+    </div>
+
+    <div>
+        <h3>
+            Remove the duplicate elements in an array{{duplicateArray}}
+        </h3>
+        <button class="btn btn-primary" (click)="removeDuplicateElement()">
+            remove duplicate
+        </button>
+        <p>
+            Method-1:   <strong>
+                uniquesArray= new Set(array)
+            </strong>
+        </p>
+      
+        <p>
+            Ans= {{uniqueArray1}}
+        </p>
+      
+    </div>
+    <div>
+        <h3>Only string allowed</h3>
+        <input type="text" #onlystring (keyup.enter)="OnlyStringallowed(onlystring.value)"
+         minlength="3" maxlength="10" >
+      
+    </div>
+
+    <div>
+        <fieldset>
+            <legend>Filter By name</legend>
+            <input type="text" #inputname (keyup.enter)="filterbyname()" >
+        </fieldset>
+        <strong>Table - Filter by name</strong>
+        <table>
+            <th>
+                Name
+            </th>
+            <th>
+                age
+            </th>
+            <th>
+                gender
+
+            </th>
+
+          
+            <tr *ngFor="let fil of filter | customPipe:'name':inputname.value ">
+                <td>
+                    {{fil.name}}
+                </td>
+                <td>
+                    {{fil.age}}
+                </td>
+                <td>
+                    {{fil.gender}}
+                </td>
+            </tr>
+        </table>
+  
+
+        <strong>Filter by gender</strong>
+        <div *ngFor="let fil of filter |customPipe:'gender':'f' ">
+            {{fil.name}} - {{fil.age}} - {{fil.gender}}
+        </div>
+    </div>
+
+    <div>
+        <form [formGroup]='loginform' (ngSubmit)="submit(loginform.value)" >
+            <fieldset>
+                <legend>Username</legend>
+                <input type="text" formControlName="username">
+            </fieldset>
+          
+            <input type="password" formControlName="password">
+            <button type="submit" >submit</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>
+            Let Vs var 
+        </h3>
+        <p>
+           <strong>Let - </strong> <strong class="text-primary">  Block scope</strong>
+           <br>
+           <strong>var - </strong> <strong class="text-danger"> global scope</strong>
+        </p>
+    </div>
+
+</div>

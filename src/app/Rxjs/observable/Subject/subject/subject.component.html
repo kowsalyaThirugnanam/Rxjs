@@ -1,0 +1,73 @@
+<div style="padding: 10px;">
+    <h1 style="text-align: center;">Subject/Behaviour Subject</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>
+                Subject
+            </h3>
+            <p>
+                -- A Subject is a special type of Observable that allows values to be multicasted to many Observers.
+                Subjects are like EventEmitters.
+                <br>
+                -- <strong>It has no initial values </strong> 
+                <br>
+                --Every Subject is an Observable and an Observer. You can subscribe to a Subject, and you can call next
+                to feed values as well as error and complete.
+            </p>
+            <hr>
+            <div class="card">
+                <div class="card-header">
+                    User name : <strong class="text-warning"> {{username1}} </strong>
+
+
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Update</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" #UpdateUsername placeholder="Username"
+                                (keyup.enter)="updateUsername(UpdateUsername.value)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h3>
+                Behaviour Subject
+            </h3>
+            <p>
+                -- A Subject is a special type of Observable that allows values to be multicasted to many Observers.
+                Subjects are like EventEmitters.
+                <br>
+                -- <strong>It has  initial values </strong> 
+                <br>
+                --Every Subject is an Observable and an Observer. You can subscribe to a Subject, and you can call next
+                to feed values as well as error and complete.
+            </p>
+            <hr>
+            <div class="card">
+                <div class="card-header">
+                    User name : <strong class="text-warning"> {{username2}} </strong>
+
+
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Update</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" #UpdateUsername1 placeholder="Username"
+                                (keyup.enter)="updateUsername1(UpdateUsername1.value)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+  <app-replay-subject></app-replay-subject>
+    <hr>
+    <app-async-subject></app-async-subject>
+</div>

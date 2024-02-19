@@ -1,0 +1,8 @@
+.concatoutput{
+    border: 1px solid brown;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    height: 200px;
+    overflow: auto;
+}

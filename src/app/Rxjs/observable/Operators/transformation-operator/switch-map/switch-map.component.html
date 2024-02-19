@@ -1,0 +1,102 @@
+<div style="padding: 10px;overflow: hidden;">
+
+    <h4 style="text-align: center;">
+        Switch Map
+    </h4>
+    <p>-- Switch Map is a flat Map
+        <br>
+        -- It is used to access the observable data that is return from another observable.(Nested observable)
+        <br>
+        <strong class="text-warning">--Main difference is cancelling effect.</strong>
+        <br>
+        --On each emission the previous inner observable is cancelled and the new observable is subscribed.
+    </p>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <strong>
+                Ex-01
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        Map
+                    </strong>
+                </p>
+                <p>
+                    --Using Map -- we need to subscribe twice (observables of observables )or(Nested observable) to get
+                    the values
+                    <br>
+                    -- If subscribe once it will give object(only observable data)
+                </p>
+            </div>
+            <br>
+            <div id="output4">
+
+            </div>
+        </div>
+
+        <div class="col">
+            <strong>
+                Ex-02
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        Map + SwitchAll
+                    </strong>
+
+                </p>
+                <p>
+                    <strong>
+                        SwitchAll
+                    </strong>
+                    --Flat observable of observables. Once the previous value emited the it will cancel and emit the new
+                    value
+                </p>
+            </div>
+            <br>
+            <div id="output5">
+
+            </div>
+        </div>
+
+        <div class="col">
+            <strong>
+                Ex-03
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        SwitchMap = Map+SwitchAll
+                    </strong>
+                </p>
+            </div>
+            <br>
+            <div id="output6">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<hr>
+<div style="padding: 10px;overflow: hidden;">
+
+    <h4 style="text-align: center;">
+        Exhaust Map
+    </h4>
+    <p>
+       -- Map to inner observable, ignore other values until that observable completes.
+       <br>
+       --do not distrube mode
+       <br>
+       --if it is working on the inner observable,ignore other values untill get the response of the first one
+       <br>
+       --it is used to avoid the accidental multiple request to the server
+    </p>
+    <strong>Sorry examples are not work out...</strong>
+</div>

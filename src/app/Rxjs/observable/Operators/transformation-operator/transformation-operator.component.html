@@ -1,0 +1,154 @@
+<div style="padding: 10px;overflow: hidden;">
+    <h2 style="text-align: center;">
+        Transfromation Operator
+    </h2>
+    <br>
+    <div>
+        <h4>
+            Map
+        </h4>
+        <p>-- It is used to modify or transform or change the stream data and return in new observable</p>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <strong>
+                    Ex-01
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Map:'Video'+data
+                        </strong>
+                    </p>
+                </div>
+                <br>
+                <p>
+                    Message: <strong>{{Message1}} </strong>
+                </p>
+            </div>
+
+            <div class="col">
+                <strong>
+                    Ex-02
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Map:data =>data*10
+                        </strong>
+                    </p>
+                </div>
+                <br>
+                <p>
+                    Message: <strong>{{Message2}} </strong>
+                </p>
+            </div>
+
+            <div class="col">
+                <strong>
+                    Ex-03
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Map:Object data
+                        </strong>
+                    </p>
+                </div>
+                <br>
+                <p>
+                    Message: <strong id="output"> </strong>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div>
+        <h3>
+            Pluck
+        </h3>
+        <p>
+            -- It is used to pluck the value of the property from an object using key name
+        </p>
+        <div class="row">
+            <div class="col">
+                <strong>
+                    Ex-01
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Pluck: pluck the value for the name in object
+                        </strong>
+                    </p>
+                </div>
+                <br>
+                <p>
+                    Name: <strong>{{pluckname}} </strong>
+                </p>
+            </div>
+
+            <div class="col">
+                <strong>
+                    Ex-02
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Pluck:pluck the value for the nested Object
+                        </strong>
+                    </p>
+                </div>
+                <br>
+                <p>
+                    Nested Object Values: <strong>{{plucknestedvalue}} </strong>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <h3>
+            Debounce Time 
+        </h3>
+
+        <div class="row">
+            <div class="col-md-6">
+                <strong class="text-primary">
+                    Debounce Time
+                </strong>
+                <p>
+                    -- It will emit the values from the observable only after the purticular time passed out.
+                </p>
+                <hr>
+                <div class="mapheading">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Search</label>
+                        <div class="col-sm-10">
+                            <input type="text"  class="form-control"
+                             #debouncesearchbox placeholder="Search..." >
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>
+                    Debounce Text after 1 sec: <strong class="text-success">{{debounceresp}} </strong>
+                </p>
+            </div>
+
+           
+        </div>
+    </div>
+    <hr>
+
+    <app-merge-map></app-merge-map>
+    <hr>
+    <app-switch-map></app-switch-map>
+</div>

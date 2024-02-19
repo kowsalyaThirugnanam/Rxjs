@@ -1,0 +1,86 @@
+<div style="padding: 10px;overflow: hidden;">
+
+    <h4 style="text-align: center;">
+        Concat Map
+    </h4>
+    <p>
+        <br>
+        -- data stream in order(1st data complete then 2nd data streamed)
+        <br>
+        -- flat the observables(nested observable) or (observables of observables)
+    </p>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <strong>
+                Ex-01
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        Map
+                    </strong>
+                </p>
+                <p>
+                    --Using Map -- we need to subscribe twice (observables of observables )or(Nested observable) to get
+                    the values
+                    <br>
+                    -- If subscribe once it will give object(only observable data)
+                </p>
+            </div>
+            <br>
+            <div id="output4">
+
+            </div>
+           
+        </div>
+
+        <div class="col">
+            <strong>
+                Ex-02
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        MergeMap
+                    </strong>
+                    
+                </p>
+                <p>
+                   
+                    --Flat observable of observables
+                    <br>
+                    -- Merge all datas and display at a time
+                </p>
+            </div>
+            <br>
+           <div id="output2">
+
+           </div>
+        </div>
+
+        <div class="col">
+            <strong>
+                Ex-03
+            </strong>
+            <hr>
+            <div class="mapheading">
+                <p>
+                    <strong>
+                        ConcatMap = Map+ConcatAll
+                    </strong>
+                    <br>
+                    --display the data in order
+                </p>
+
+            </div>
+            <br>
+           <div id="output3">
+
+           </div>
+        </div>
+    </div>
+
+</div>

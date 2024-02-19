@@ -1,0 +1,176 @@
+<div style="padding: 10px;overflow: hidden;">
+    <h2 style="text-align: center;">
+        Combination Operator
+    </h2>
+    <br>
+    <div>
+        <h4>
+            Concat
+        </h4>
+        <p>-- It is used to combine or concate the streamed observable data
+            <br>
+            --1st observable completed then 2nd obsrevable data start to stream
+        </p>
+
+        <hr>
+        <div class="row">
+            <div class="col">
+                <strong>
+                    Ex-01
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Observable1: Techchannel[1,2,3,4,5]
+                        </strong>
+                    </p>
+                </div>
+                <br>
+             
+            </div>
+
+            <div class="col">
+                <strong>
+                    Ex-02
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Observable2: Comedychannel[1,2,3,4,5]
+                        </strong>
+                    </p>
+                </div>
+                <br>
+             
+            </div>
+
+            <div class="col">
+                <strong>
+                    Ex-03
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Observable3: Newschannel[1,2,3,4,5]
+                        </strong>
+                    </p>
+                </div>
+                <br>
+              
+            </div>
+        </div>
+        <div class="concatoutput">
+            <div class="card-header">
+                <strong>
+                    Streamed Concat data
+                </strong>
+            </div>
+            <div class="card-body">
+                <div id="output">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div>
+        <h4>
+            Merge
+        </h4>
+        <p>-- Merge the observable data based on the time of response
+           
+        </p>
+
+        <hr>
+        <div class="row">
+            <div class="col">
+                <strong>
+                    Ex-01
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Observable1: Techchannel[1,2,3,4,5]
+                        </strong>
+                    </p>
+                </div>
+                <br>
+             
+            </div>
+
+            <div class="col">
+                <strong>
+                    Ex-02
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Observable2: Comedychannel[1,2,3,4,5]
+                        </strong>
+                    </p>
+                </div>
+                <br>
+             
+            </div>
+
+            <div class="col">
+                <strong>
+                    Ex-03
+                </strong>
+                <hr>
+                <div class="mapheading">
+                    <p>
+                        <strong>
+                            Observable3: Newschannel[1,2,3,4,5]
+                        </strong>
+                    </p>
+                </div>
+                <br>
+              
+            </div>
+        </div>
+        <div class="concatoutput">
+            <div class="card-header">
+                <strong>
+                    Streamed Concat data
+                </strong>
+            </div>
+            <div class="card-body">
+                <div id="output1">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <app-concat-map></app-concat-map>
+    <hr>
+    <div>
+        <h2 style="text-align: center;">
+            Zip Operator
+        </h2>
+        <p>
+            --Used for group of observables
+            <br>
+            --After all observals emit the values,Zip will emit all values at last as array.
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2 style="text-align: center;">
+            forkJoin Operator
+        </h2>
+        <p>
+            --Used for group of observables
+            <br>
+            --forkJoin will care about the finaly emited values in each observables
+        </p>
+    </div>
+</div>

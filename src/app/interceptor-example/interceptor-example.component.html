@@ -1,0 +1,38 @@
+<div style="margin:10px">
+    <h3 style="text-align: center;">
+        Interceptor
+    </h3>
+    <p>
+        <em>-- It is a service class</em>
+        <br>
+        -- It is used to change or modify the http client request and response
+        <br>
+        -- eg. if we want to add header in all http request no need to write in all req. instead of that if we write in
+        Interceptor then it will get added.
+        <br>
+        --eg.Used to add spinner
+        <br>
+        -- multiple Interceptors are applicable
+
+    </p>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Ex:01 | Url and headers in http request are common
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-success" (click)="getdata()">
+                        Get data
+                    </button>
+                    <div>
+                        {{res1 | json}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+</div>

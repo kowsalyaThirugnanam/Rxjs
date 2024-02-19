@@ -1,0 +1,132 @@
+<h1 style="text-align: center;">Creation Operator</h1>
+
+<div class="row m-4">
+    <div class="col">
+       <div class="card">
+         <div class="card-header">
+            <strong>
+                From Event
+            </strong>
+         </div>
+         <div class="card-body">
+            <button class="btn btn-primary" #addList>
+                Add List
+            </button>
+
+         </div>
+       </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+               <strong>List</strong>
+            </div>
+            <div class="card-body">
+                <ul id="elementlist"></ul>
+            </div>
+        </div>
+     </div>
+</div>
+<hr>
+
+<div class="row m-4">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <strong>Interval</strong>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-primary" #intervalbtn>
+                    Start Interval of 1 sec
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card-header">
+            <strong>List</strong>
+        </div>
+        <div class="card-body">
+            <ul id="intervalList">
+
+            </ul>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="row m-4">
+
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <strong>
+                    of- Operator
+                </strong>
+                <p> Used to convert the arguments as Observable(data stream)</p>
+            </div>
+            <div class="card-body">
+               <p #ofOperator> 
+                Double Click => of(1,2,3,4,5)
+               </p>
+               <p>
+                   Stream data...
+               </p>
+               <p id="ofAns">
+
+               </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <strong>
+                    from- Operator
+                </strong>
+                <p> Used to convert the array,object,Promises etc as Observable(data stream)</p>
+            </div>
+            <div class="card-body">
+               <p #fromOperator> 
+                Double Click => from => {{'{name:kowsi;age:27;gender:f}'}}
+               </p>
+               <p>
+                   Stream data...
+               </p>
+               <p id="ofAns1">
+
+               </p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row m-4">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+               <strong>
+                Utility operator = toArray();
+               </strong>
+            </div>
+            <div class="card-body">
+               <p #toArrayClick> Click convert the interval response as array</p>
+               <p id="toArray">Ans:</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+               <strong>
+                Utility operator = toArray();
+               </strong>
+            </div>
+            <div class="card-body">
+               <p #toArrayClick1> Click convert the arguments('anup','star','sports','super','hero')</p>
+               <p id="toArray1">Ans:</p>
+            </div>
+        </div>
+    </div>
+</div>
